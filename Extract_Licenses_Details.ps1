@@ -69,7 +69,7 @@ do
             $userobj | Add-Member -MemberType NoteProperty UserPrincipalName $user.userPrincipalName
             $userobj | Add-Member -MemberType NoteProperty Licenses $(($licenses|Sort-Object) -join("+"))
             #$userobj| fl
-            $userobj | Export-Csv -Path $path\$directory\LicenseDetails.csv -NoTypeInformation -Append
+            $userobj | Export-Csv -Path $path\LicenseDetails.csv -NoTypeInformation -Append
         }
     }
 
